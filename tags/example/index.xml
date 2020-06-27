@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Example on Hugo Blog</title>
+    <link>http://localhost:1313/tags/example/</link>
+    <description>Recent content in Example on Hugo Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Jan 2019 22:14:57 -0600</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/example/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Example post</title>
+      <link>http://localhost:1313/test1/</link>
+      <pubDate>Mon, 14 Jan 2019 22:14:57 -0600</pubDate>
+      
+      <guid>http://localhost:1313/test1/</guid>
+      <description>Welcome StackEdit!
+FROM mhart/alpine-node:12 AS builder MAINTAINER Yashwant Soni&amp;lt;yashwantsoni009@gmail.com&amp;gt; WORKDIR /app COPY basic-react-app . RUN yarn RUN yarn run build FROM nginx:alpine COPY ./nginx.conf /etc/nginx/conf.d/default.conf COPY --from=builder /app/build /usr/share/nginx/html CMD sed -i -e &#39;s/$PORT/&#39;&amp;quot;$PORT&amp;quot;&#39;/g&#39; /etc/nginx/conf.d/  Files StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible offline!
+Create files and folders The file explorer is accessible using the button in left corner of the navigation bar.</description>
+    </item>
+    
+  </channel>
+</rss>
