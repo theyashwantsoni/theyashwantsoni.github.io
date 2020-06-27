@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="Hugo 0.71.0" />
+    
+    <link rel="stylesheet" href="https://theyashwantsoni.github.io/css/custom.css">
+    
+    <link rel="stylesheet" href="https://theyashwantsoni.github.io/css/github.css">
+    
+    
+    
+    <title>Build and Deploy React App with Heroku Docker Container and Gitlab CI | codeporn</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300,600" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+    <nav class="nav-menu card">
+  <div>
+    <a href="/" style="font-size: 28px;font-weight: 600;">codeporn</a >
+    
+  </div>
+  <ul>
+     
+      
+      
+      <li><a class="nav-link" href="/tags/"><i data-feather="tag"></i> Tags</a></li>
+     
+      
+      
+      <li><a class="nav-link" href="/"><i data-feather="home"></i> Posts</a></li>
+    
+  </ul>
+</nav>
+
+      <main id="main">
+       
+<div class="container_" style="margin-top: 50px;">
+    <h1>Build and Deploy React App with Heroku Docker Container and Gitlab CI</h1>
+    
+  
+  
+    <a href="https://theyashwantsoni.github.io/tags/gitlab" class="category">Gitlab</a>
+  
+  
+    <a href="https://theyashwantsoni.github.io/tags/heroku" class="category">Heroku</a>
+  
+  
+    <a href="https://theyashwantsoni.github.io/tags/cicd" class="category">CICD</a>
+  
+ <br> 
+
+<time class="date-time" datetime="2019-01-14">Jan 14, 2019</time>
+    <br>
+    <article class="markdown-body">
+        <p>In this article I will show you how to setup Gitlab CI/CD pipeline to deploy a React app with Docker.</p>
+<h1 id="introduction-to-gitlab-cicd">Introduction to GitLab CI/CD</h1>
+<p>GitLab CI/CD is a powerful tool built into GitLab that allows you to apply all the continuous methods (Continuous Integration, Delivery, and Deployment) to your software with no third-party application or integration needed.</p>
+<p><img src="/img/posts/cicd_pipeline_infograph.png" alt=""></p>
+<h1 id="how-gitlab-cicd-works">How GitLab CI/CD works</h1>
+<p>To use GitLab CI/CD, all you need is an application codebase hosted in a Git repository, and for your build, test, and deployment scripts to be specified in a file called <code>[.gitlab-ci.yml](https://docs.gitlab.com/ee/ci/yaml/README.html)</code>, located in the root path of your repository.</p>
+<p>Here is some comaprision stats with other CI/CD tools.</p>
+<p><img src="/img/posts/forrester-ci-wave-graphic.svg" alt=""></p>
+<p>*******You can read more at <a href="https://docs.gitlab.com/ee/ci/introduction/">https://docs.gitlab.com/ee/ci/introduction/</a></p>
+<h1 id="lets-start-with-a-super-simple-react-app">Lets start with a Super Simple React App</h1>
+<h2 id="1-we-will-use--create-react-app--for-boilerplate-code">1) We will use  <strong>create-react-app</strong>  for boilerplate code.</h2>
+<pre><code>npm i -g create-react-app
+create-react-app my-react-app 
+</code></pre>
+<h2 id="2-now-we-will-containerise-the-app">2) Now we will containerise the app</h2>
+<p>First we will need to create a  <strong>Dockerfile.</strong></p>
+<pre><code>FROM mhart/alpine-node:12 AS builder
+MAINTAINER Yashwant Soni&lt;yashwantsoni009@gmail.com&gt;
+
+WORKDIR /app
+COPY basic-react-app .
+RUN yarn 
+RUN yarn run build
+
+FROM nginx:alpine
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+
+COPY --from=builder /app/build /usr/share/nginx/html
+CMD sed -i -e 's/$PORT/'&quot;$PORT&quot;'/g' /etc/nginx/conf.d/default.conf &amp;&amp; nginx -g 'daemon off;'
+</code></pre>
+<p>Here  <strong>$PORT</strong> is  <strong>ENV</strong>  variable from Heroku app as Heroku does not gives access to port 80.</p>
+<p>To a single page application we will use  <strong>Nginx</strong>  web server and we change its configuration to following</p>
+<pre><code>server {
+ listen $PORT;
+
+ sendfile on;
+
+ default_type application/octet-stream;
+
+ gzip on;
+ gzip_http_version 1.1;
+ gzip_disable   &quot;MSIE [1-6]\.&quot;;
+ gzip_min_length  256;
+ gzip_vary     on;
+ gzip_proxied   expired no-cache no-store private auth;
+ gzip_types    text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+ gzip_comp_level  9;
+
+ root /usr/share/nginx/html;
+
+ location / {
+  try_files $uri $uri/ /index.html =404;
+ }
+}
+</code></pre>
+<p>Save this config as nginx.conf in root of your application.</p>
+<p>Don&rsquo;t forget to add node_modules in .dockerignore and .gitignore</p>
+<p>To check the app locally, do</p>
+<pre><code>docker build -t react-app-basic .
+docker run -p 3000:80 react-app-basic -d
+</code></pre>
+<p>Now go to localhost:3000</p>
+<h2 id="3create-a-heroku-app">3)Create a Heroku app</h2>
+<p>You can simply create an app on  <a href="https://dashboard.heroku.com/">https://dashboard.heroku.com/</a></p>
+<p>Just give a fancy name to your app.</p>
+<h2 id="4get-heroku-auth-token-and-save-it-in-gitlab-secret-variables">4)Get Heroku Auth Token and save it in Gitlab secret variables</h2>
+<p>Use Heroku cli to get auth token.</p>
+<pre><code>heroku login
+heroku auth:token  
+</code></pre>
+<p>The commands above will give you a auth token like c4cd94da15ea0544802c2cfd5ec4ead324327430</p>
+<p>Go to settings &gt; cicd of your gitlab project and save this token like,</p>
+<p><img src="/img/posts/Screenshot%20from%202020-06-14%2008-30-57.png" alt=""></p>
+<h2 id="5-build-a-pipeline">5) Build a pipeline</h2>
+<p>There are many templates provided by Gitlab for various apps. You can find them in your Gitlab project while creating a  .gitlab-ci.yml  file.</p>
+<p>Now copy and paste following code to  .gitlab-ci.yml</p>
+<pre><code>image: docker:latest
+
+
+services:
+    - docker:dind
+
+
+before_script:
+    - apk --no-cache add curl
+
+
+stages:
+    - build
+    - deploy
+  
+variables:
+    CONTAINER_IMAGE: registry.gitlab.com/&lt;username&gt;/&lt;project-name&gt;
+    BUILD_IMAGE: $CONTAINER_IMAGE:$CI_BUILD_REF_NAME
+    HEROKU_REGISTORY: registry.heroku.com/&lt;fancy-heroku-app-name&gt;/web
+    HEROKU_APP: gitlab-ci-demo-heroku
+    
+build:
+  stage: build
+  tags:
+    - docker
+  script:
+    - echo $CI_BUILD_TOKEN | docker login -u $CI_REGISTRY_USER --password-stdin registry.gitlab.com 
+    - docker build --no-cache -t $BUILD_IMAGE .
+    - docker push $BUILD_IMAGE
+    
+
+
+deploy_stg:
+  stage: deploy
+  tags:
+    - docker
+  only:
+    - master
+  script:
+    - docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
+    - echo $CI_BUILD_TOKEN | docker login -u $CI_REGISTRY_USER --password-stdin registry.gitlab.com 
+    - docker pull $BUILD_IMAGE
+    - docker tag  $BUILD_IMAGE $HEROKU_REGISTORY
+    - docker push $HEROKU_REGISTORY
+    - docker run --rm -e HEROKU_API_KEY=$HEROKU_API_KEY wingrunr21/alpine-heroku-cli container:release web --app $HEROKU_APP
+</code></pre>
+<h2 id="some-explanation-about-this-pipeline">Some explanation about this pipeline</h2>
+<ul>
+<li>
+<p>There can be many  <strong>stages</strong>  for various operation like test, build and deploy.</p>
+</li>
+<li>
+<p><strong>docker:dind</strong> (Docker in Docker) is required to build docker images.</p>
+</li>
+<li>
+<p>We can define variables to use in pipeline and to avoid typo.</p>
+</li>
+<li>
+<p>Variables like CI_REGISTRY_USER comes form Gitlab CI/CD process environment.</p>
+</li>
+<li>
+<p>Above script only work when any change happens in  <strong>master</strong>  branch. We can write stages for multiple branches.</p>
+</li>
+<li>
+<p><strong>wingrunr21/alpine-heroku-cli</strong> This image packages the <strong>Heroku CLI</strong> inside an <strong>Alpine</strong> Linux based Docker container.</p>
+</li>
+</ul>
+<p>Now to see the  <strong><em>magic</em></strong>  commit your changes in master branch.</p>
+<p><img src="/img/posts/Screenshot%20from%202020-06-14%2008-47-22.png" alt=""></p>
+<p>Now go to <!-- raw HTML omitted -->.herokuapp.com</p>
+<p><img src="/img/posts/Screenshot%20from%202020-06-14%2008-48-00.png" alt=""></p>
+<p>Get in touch if you have any query :)</p>
+<p>THE END!!</p>
+
+    </article>
+</div>
+
+      </main>
+    <div class="container_">
+      <hr><br>
+  <p style="text-align: center;">Copyright © 2020 - Yashwant Soni</p>
+    </div>
+  </body>
+</html>
