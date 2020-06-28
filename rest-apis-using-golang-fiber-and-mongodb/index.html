@@ -1,0 +1,269 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+  <head itemscope itemtype="https://theyashwantsoni.github.io">
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="generator" content="Hugo 0.71.0" />
+    
+    <link rel="stylesheet" href="https://theyashwantsoni.github.io/css/custom.css">
+    
+    <link rel="stylesheet" href="https://theyashwantsoni.github.io/css/github.css">
+    
+    
+    
+    <title>Rest APIs Using Golang Fiber and MongoDB | codeporn</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300,600" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+    <nav class="nav-menu card">
+  <div>
+    <a href="https://theyashwantsoni.github.io/" style="font-size: 28px;font-weight: 600;">codeporn</a >
+    
+  </div>
+  <ul>
+     
+      
+      
+      <li><a class="nav-link" href="https://theyashwantsoni.github.io/tags/"><i data-feather="tag"></i> Tags</a></li>
+     
+      
+      
+      <li><a class="nav-link" href="https://theyashwantsoni.github.io/"><i data-feather="home"></i> Posts</a></li>
+    
+  </ul>
+</nav>
+
+      <main id="main">
+       
+<div class="container_" style="margin-top: 50px;">
+    <h1>Rest APIs Using Golang Fiber and MongoDB</h1>
+    <img style="width: 100%;" src="https://theyashwantsoni.github.io/img/banner/gofiber.png">
+    
+  
+  
+    <a href="https://theyashwantsoni.github.io/tags/fiber" class="category">Fiber</a>
+  
+  
+    <a href="https://theyashwantsoni.github.io/tags/golang" class="category">Golang</a>
+  
+  
+    <a href="https://theyashwantsoni.github.io/tags/mongodb" class="category">MongoDB</a>
+  
+  
+    <a href="https://theyashwantsoni.github.io/tags/restful" class="category">Restful</a>
+  
+ <br>  
+
+<span  class="date-time" style="color:lightgrey; font-size: 14px;">Last updated: <time datetime="2020-04-19">Apr 19, 2020</time></span>
+    <div style="height: 60px;"></div>
+    <article class="markdown-body">
+        <h1 id="what-is-fiber">What is Fiber?</h1>
+<p>Fiber is an  <strong>Express</strong>  inspired web framework build on top of  <strong>Fasthttp</strong>, the fastest HTTP engine for Go. Designed to ease things up for fast development with zero memory allocation and performance in mind.</p>
+<h2 id="what-is-special-in-fiber">What is special in Fiber?</h2>
+<p>source :  <a href="https://fiber.wiki/benchmarks">https://fiber.wiki/benchmarks</a></p>
+<p>Fiber handled 6,162,556 responses per second with an average latency of 2.0 ms.</p>
+<p>Express handled 367,069 responses per second with an average latency of 354.1 ms.</p>
+<p><img src="https://theyashwantsoni.github.io/img/posts/plaintext.png" alt=""></p>
+<p>In this article we will create APIs for CRUD operations.</p>
+<p>We will be using:</p>
+<ul>
+<li><strong>golang</strong>  1.14.1 (<a href="https://golang.org/doc/install">installation</a>)</li>
+<li><strong>mongoDB</strong> (<a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/">installation</a>)</li>
+<li><strong>postman</strong></li>
+</ul>
+<h1 id="lets-create-a-super-simple-fiber-app">Lets create a super simple Fiber App</h1>
+<p>First of all, create a go module(go.mod is like package.json)</p>
+<pre><code>go mod init &lt;modname&gt;
+</code></pre>
+<p>Now download Fiber</p>
+<pre><code> go get -u github.com/gofiber/fiber
+</code></pre>
+<p>&ndash;</p>
+<pre><code>package main
+
+import &quot;github.com/gofiber/fiber&quot;
+
+func main() {
+ app := fiber.New()
+
+ app.Get(&quot;/&quot;, func(c *fiber.Ctx) {
+  c.Send(&quot;Hello, World!&quot;)
+ })
+
+ app.Listen(3000)
+}
+</code></pre>
+<p>&ndash;</p>
+<pre><code>go run server.go
+</code></pre>
+<p>Go to localhost:3000 in your browser.</p>
+<h2 id="crud-operations">CRUD Operations</h2>
+<p>1)Connect with MongoDB</p>
+<p>** MongoDB must be installed and mongod server must be running</p>
+<p><img src="https://theyashwantsoni.github.io/img/posts/mongo.jpg" alt=""></p>
+<p>First of all import these packages along with Fiber.</p>
+<pre><code>import (
+ &quot;context&quot;
+ &quot;fmt&quot;
+ &quot;log&quot;
+ &quot;github.com/gofiber/fiber&quot;
+ &quot;go.mongodb.org/mongo-driver/bson&quot;
+ &quot;go.mongodb.org/mongo-driver/mongo&quot;
+ &quot;go.mongodb.org/mongo-driver/mongo/options&quot;
+)
+</code></pre>
+<p>Now in the  main  function add following code in starting.</p>
+<pre><code>clientOptions := options.Client().ApplyURI(&quot;mongodb://localhost:27017&quot;)
+    client, err := mongo.Connect(context.TODO(), clientOptions)
+    if err != nil {
+        log.Fatal(err)
+    }
+    err = client.Ping(context.TODO(), nil)
+    if err != nil {
+        log.Fatal(err)
+    }
+    fmt.Println(&quot;Connected to MongoDB!&quot;)
+
+ collection := client.Database(&quot;codeporn&quot;).Collection(&quot;users&quot;)
+</code></pre>
+<p>***It is all mentioned in docs I am just putting it together. :)</p>
+<h2 id="create-operation">Create Operation</h2>
+<p>We will be inserting username and password in users collection.</p>
+<p>Lets create a struct first.</p>
+<pre><code>type User struct {
+ Username string `bson:&quot;username&quot;`
+ Password string `bson:&quot;password&quot;`
+}
+</code></pre>
+<p>Now we will create a &ldquo;add&rdquo; endpoint.</p>
+<pre><code>app.Post(&quot;/add&quot;, func(c *fiber.Ctx) {
+ // body := c.Body()
+ // fmt.Println(body)
+
+ p := new(User)
+
+    if err := c.BodyParser(p); err != nil {
+        log.Fatal(err)
+    }
+
+ dummy := User{p.Username,p.Password}
+
+ insertResult, err := collection.InsertOne(context.TODO(), dummy)
+
+ if err != nil {
+  log.Fatal(err)
+ }
+
+ fmt.Println(&quot;Inserted a single document: &quot;, insertResult.InsertedID)
+ c.JSON(insertResult)
+})
+</code></pre>
+<p>Those who are from Express background will find this code very familier.</p>
+<p><img src="https://theyashwantsoni.github.io/img/posts/Screenshot%20from%202020-04-19%2010-49-42.png" alt=""></p>
+<h2 id="read-operation">Read Operation</h2>
+<p>We will create an endpoint which fetches a user.</p>
+<pre><code>app.Get(&quot;/:username&quot;, func(c *fiber.Ctx) {
+  log.Println(&quot;Get request with value: &quot; + c.Params(&quot;username&quot;))
+  var result User
+  filter := bson.D{{&quot;username&quot;, c.Params(&quot;username&quot;)}}
+
+  err = collection.FindOne(context.TODO(), filter).Decode(&amp;result)
+  if err != nil {
+   log.Println(err)
+  }
+  c.JSON(result);
+ })
+</code></pre>
+<p><img src="https://theyashwantsoni.github.io/img/posts/Screenshot%20from%202020-04-19%2010-50-37.png" alt=""></p>
+<p>*Fetching all the collection is quite different.</p>
+<pre><code> app.Get(&quot;/&quot;, func(c *fiber.Ctx) {
+
+  findOptions := options.Find()
+  findOptions.SetLimit(2)
+  var results []*User
+
+  // Passing bson.D{{}} as the filter matches all documents in the collection
+  cur, err := collection.Find(context.TODO(), bson.D{{}}, findOptions)
+  if err != nil {
+    log.Fatal(err)
+  }
+
+  // Finding multiple documents returns a cursor
+  // Iterating through the cursor allows us to decode documents one at a time
+  for cur.Next(context.TODO()) {
+    // create a value into which the single document can be decoded
+    var elem User
+    err := cur.Decode(&amp;elem)
+    if err != nil {
+      log.Fatal(err)
+    }
+    results = append(results, &amp;elem)
+  }
+  if err := cur.Err(); err != nil {
+    log.Println(err)
+  }
+  // Close the cursor once finished
+  cur.Close(context.TODO())
+
+  c.JSON(results);
+ })
+</code></pre>
+<p>The output will be all users in the  <strong>users</strong>  collection.</p>
+<h2 id="update-operation">Update Operation</h2>
+<p>We will now create an endpoint to update password.</p>
+<pre><code>  app.Put(&quot;/update&quot;, func(c *fiber.Ctx) {
+  p := new(User)
+
+        if err := c.BodyParser(p); err != nil {
+            log.Println(err)
+  }
+   
+  filter := bson.D{{&quot;username&quot;, p.Username}}
+
+  update := bson.D{
+   {&quot;$set&quot;, bson.D{
+    {&quot;Password&quot;, p.Password},
+   }},
+  }
+  updateResult, err := collection.UpdateOne(context.TODO(), filter, update)
+  if err != nil {
+   log.Println(err)
+  }
+
+  c.JSON(updateResult)
+ })
+</code></pre>
+<p><img src="https://theyashwantsoni.github.io/img/posts/Screenshot%20from%202020-04-19%2010-53-03.png" alt=""></p>
+<h2 id="delete-operation">Delete Operation</h2>
+<p>We will create an endpoint to delete a user.</p>
+<pre><code> app.Delete(&quot;/delete&quot;, func(c *fiber.Ctx) {
+  p := new(User)
+
+        if err := c.BodyParser(p); err != nil {
+            log.Println(err)
+  }
+  filter := bson.D{{&quot;username&quot;, p.Username}}
+
+  deleteResult, err := collection.DeleteOne(context.TODO(), filter)
+  if err != nil {
+    log.Fatal(err)
+  }
+  c.JSON(deleteResult)
+
+ })
+</code></pre>
+<p><img src="https://theyashwantsoni.github.io/img/posts/Screenshot%20from%202020-04-19%2010-54-38.png" alt=""></p>
+<p>THE END!!!</p>
+
+    </article>
+</div>
+
+      </main>
+    <div class="container_">
+      <hr><br>
+  <p style="text-align: center;">Copyright © 2020 - Yashwant Soni</p>
+    </div>
+  </body>
+</html>

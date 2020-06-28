@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html prefix="og: http://ogp.me/ns#" lang="en">
+  <head itemscope itemtype="https://theyashwantsoni.github.io">
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="generator" content="Hugo 0.71.0" />
     
     <link rel="stylesheet" href="https://theyashwantsoni.github.io/css/custom.css">
@@ -18,18 +19,18 @@
   <body>
     <nav class="nav-menu card">
   <div>
-    <a href="/" style="font-size: 28px;font-weight: 600;">codeporn</a >
+    <a href="https://theyashwantsoni.github.io/" style="font-size: 28px;font-weight: 600;">codeporn</a >
     
   </div>
   <ul>
      
       
       
-      <li><a class="nav-link" href="/tags/"><i data-feather="tag"></i> Tags</a></li>
+      <li><a class="nav-link" href="https://theyashwantsoni.github.io/tags/"><i data-feather="tag"></i> Tags</a></li>
      
       
       
-      <li><a class="nav-link" href="/"><i data-feather="home"></i> Posts</a></li>
+      <li><a class="nav-link" href="https://theyashwantsoni.github.io/"><i data-feather="home"></i> Posts</a></li>
     
   </ul>
 </nav>
@@ -38,6 +39,7 @@
        
 <div class="container_" style="margin-top: 50px;">
     <h1>Build and Deploy React App with Heroku Docker Container and Gitlab CI</h1>
+    <img style="width: 100%;" src="https://theyashwantsoni.github.io/img/banner/gitlab-heroku.png">
     
   
   
@@ -49,19 +51,19 @@
   
     <a href="https://theyashwantsoni.github.io/tags/cicd" class="category">CICD</a>
   
- <br> 
+ <br>  
 
-<time class="date-time" datetime="2019-01-14">Jan 14, 2019</time>
-    <br>
+<span  class="date-time" style="color:lightgrey; font-size: 14px;">Last updated: <time datetime="2020-06-14">Jun 14, 2020</time></span>
+    <div style="height: 60px;"></div>
     <article class="markdown-body">
         <p>In this article I will show you how to setup Gitlab CI/CD pipeline to deploy a React app with Docker.</p>
 <h1 id="introduction-to-gitlab-cicd">Introduction to GitLab CI/CD</h1>
 <p>GitLab CI/CD is a powerful tool built into GitLab that allows you to apply all the continuous methods (Continuous Integration, Delivery, and Deployment) to your software with no third-party application or integration needed.</p>
-<p><img src="/img/posts/cicd_pipeline_infograph.png" alt=""></p>
+<p><img src="https://theyashwantsoni.github.io/img/posts/cicd_pipeline_infograph.png" alt=""></p>
 <h1 id="how-gitlab-cicd-works">How GitLab CI/CD works</h1>
 <p>To use GitLab CI/CD, all you need is an application codebase hosted in a Git repository, and for your build, test, and deployment scripts to be specified in a file called <code>[.gitlab-ci.yml](https://docs.gitlab.com/ee/ci/yaml/README.html)</code>, located in the root path of your repository.</p>
 <p>Here is some comaprision stats with other CI/CD tools.</p>
-<p><img src="/img/posts/forrester-ci-wave-graphic.svg" alt=""></p>
+<p><img src="https://theyashwantsoni.github.io/img/posts/forrester-ci-wave-graphic.svg" alt=""></p>
 <p>*******You can read more at <a href="https://docs.gitlab.com/ee/ci/introduction/">https://docs.gitlab.com/ee/ci/introduction/</a></p>
 <h1 id="lets-start-with-a-super-simple-react-app">Lets start with a Super Simple React App</h1>
 <h2 id="1-we-will-use--create-react-app--for-boilerplate-code">1) We will use  <strong>create-react-app</strong>  for boilerplate code.</h2>
@@ -126,7 +128,7 @@ heroku auth:token
 </code></pre>
 <p>The commands above will give you a auth token like c4cd94da15ea0544802c2cfd5ec4ead324327430</p>
 <p>Go to settings &gt; cicd of your gitlab project and save this token like,</p>
-<p><img src="/img/posts/Screenshot%20from%202020-06-14%2008-30-57.png" alt=""></p>
+<p><img src="https://theyashwantsoni.github.io/img/posts/Screenshot%20from%202020-06-14%2008-30-57.png" alt=""></p>
 <h2 id="5-build-a-pipeline">5) Build a pipeline</h2>
 <p>There are many templates provided by Gitlab for various apps. You can find them in your Gitlab project while creating a  .gitlab-ci.yml  file.</p>
 <p>Now copy and paste following code to  .gitlab-ci.yml</p>
@@ -198,9 +200,9 @@ deploy_stg:
 </li>
 </ul>
 <p>Now to see the  <strong><em>magic</em></strong>  commit your changes in master branch.</p>
-<p><img src="/img/posts/Screenshot%20from%202020-06-14%2008-47-22.png" alt=""></p>
+<p><img src="https://theyashwantsoni.github.io/img/posts/Screenshot%20from%202020-06-14%2008-47-22.png" alt=""></p>
 <p>Now go to <!-- raw HTML omitted -->.herokuapp.com</p>
-<p><img src="/img/posts/Screenshot%20from%202020-06-14%2008-48-00.png" alt=""></p>
+<p><img src="https://theyashwantsoni.github.io/img/posts/Screenshot%20from%202020-06-14%2008-48-00.png" alt=""></p>
 <p>Get in touch if you have any query :)</p>
 <p>THE END!!</p>
 

@@ -4,32 +4,122 @@
   
   <url>
     <loc>https://theyashwantsoni.github.io/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</loc>
-    <lastmod>2019-01-14T22:14:57-06:00</lastmod>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://theyashwantsoni.github.io/tags/cicd/</loc>
-    <lastmod>2019-01-14T22:14:57-06:00</lastmod>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://theyashwantsoni.github.io/</loc>
-    <lastmod>2019-01-14T22:14:57-06:00</lastmod>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://theyashwantsoni.github.io/tags/gitlab/</loc>
-    <lastmod>2019-01-14T22:14:57-06:00</lastmod>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://theyashwantsoni.github.io/tags/heroku/</loc>
-    <lastmod>2019-01-14T22:14:57-06:00</lastmod>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://theyashwantsoni.github.io/tags/</loc>
-    <lastmod>2019-01-14T22:14:57-06:00</lastmod>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/getting-started-with-hugo-and-github-pages/</loc>
+    <lastmod>2020-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/tags/hugo/</loc>
+    <lastmod>2020-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/tags/fiber/</loc>
+    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/tags/golang/</loc>
+    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/tags/mongodb/</loc>
+    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/rest-apis-using-golang-fiber-and-mongodb/</loc>
+    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/tags/restful/</loc>
+    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/tags/angular/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/tags/docker/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/dockerizing-an-angular-app-using-nginx/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/heroku-container-registry-deployment-with-docker/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/tags/nginx/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/tags/cloud-functions/</loc>
+    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/tags/firebase/</loc>
+    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/host-dynamic-node.js-app-on-firebase-part-ii/</loc>
+    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/host-dynamic-node.js-app-on-firebase-part-i/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/deploy-your-first-application-on-kubernetes/</loc>
+    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theyashwantsoni.github.io/tags/kubernetes/</loc>
+    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

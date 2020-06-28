@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on codeporn</title>
+    <link>https://theyashwantsoni.github.io/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on codeporn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://theyashwantsoni.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploy Your First Application on Kubernetes</title>
+      <link>https://theyashwantsoni.github.io/deploy-your-first-application-on-kubernetes/</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://theyashwantsoni.github.io/deploy-your-first-application-on-kubernetes/</guid>
+      <description>What is Kubernetes? Kubernetes is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications.
+This tutorial shows how to Dockerize and deploy a Nodejs app, built with ExpressJs, as Kubernetes cluster.
+We will be using:
+ minikube (v1.8.2) - We use Minikube to run a single-node Kubernetes cluster inside a Virtual Machine (VM) on local system. Installation kubectl (v1.17.4) - Kubectl is a command line tool for controlling Kubernetes clusters.</description>
+    </item>
+    
+  </channel>
+</rss>
