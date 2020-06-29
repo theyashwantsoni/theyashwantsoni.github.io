@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Angular on codeporn</title>
-    <link>https://theyashwantsoni.github.io/tags/angular/</link>
+    <link>https://codeporn.in/tags/angular/</link>
     <description>Recent content in Angular on codeporn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://theyashwantsoni.github.io/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codeporn.in/tags/angular/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dockerizing an Angular app using Nginx</title>
-      <link>https://theyashwantsoni.github.io/post/dockerizing-an-angular-app-using-nginx/</link>
+      <link>https://codeporn.in/post/dockerizing-an-angular-app-using-nginx/</link>
       <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/post/dockerizing-an-angular-app-using-nginx/</guid>
+      <guid>https://codeporn.in/post/dockerizing-an-angular-app-using-nginx/</guid>
       <description>What is Docker? Docker is a containerization tool used to streamline application development and deployment workflows across various environments.
 This tutorial shows how to Dockerize an Angular app via Nginx.
 We will be using:

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on codeporn</title>
-    <link>https://theyashwantsoni.github.io/post/</link>
+    <link>https://codeporn.in/post/</link>
     <description>Recent content in Posts on codeporn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://theyashwantsoni.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codeporn.in/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Build and Deploy React App with Heroku Docker Container and Gitlab CI</title>
-      <link>https://theyashwantsoni.github.io/post/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</link>
+      <link>https://codeporn.in/post/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</link>
       <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/post/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</guid>
+      <guid>https://codeporn.in/post/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</guid>
       <description>In this article I will show you how to setup Gitlab CI/CD pipeline to deploy a React app with Docker.
 Introduction to GitLab CI/CD GitLab CI/CD is a powerful tool built into GitLab that allows you to apply all the continuous methods (Continuous Integration, Delivery, and Deployment) to your software with no third-party application or integration needed.
 How GitLab CI/CD works To use GitLab CI/CD, all you need is an application codebase hosted in a Git repository, and for your build, test, and deployment scripts to be specified in a file called [.</description>
@@ -24,10 +24,10 @@ How GitLab CI/CD works To use GitLab CI/CD, all you need is an application codeb
     
     <item>
       <title>Getting started with Hugo and Github pages</title>
-      <link>https://theyashwantsoni.github.io/post/getting-started-with-hugo-and-github-pages/</link>
+      <link>https://codeporn.in/post/getting-started-with-hugo-and-github-pages/</link>
       <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/post/getting-started-with-hugo-and-github-pages/</guid>
+      <guid>https://codeporn.in/post/getting-started-with-hugo-and-github-pages/</guid>
       <description>In this article we will discuss about a static site generators.
 What is Hugo? Hugo is one of the most popular open-source static site generators. We can create and serve static content within seconds. The framework is developed using Golang and it serves the &amp;ldquo;MarkDown&amp;rdquo; content.
 Installation These steps show installation using .deb package.
@@ -37,10 +37,10 @@ curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest \ | grep brow
     
     <item>
       <title>Rest APIs Using Golang Fiber and MongoDB</title>
-      <link>https://theyashwantsoni.github.io/post/rest-apis-using-golang-fiber-and-mongodb/</link>
+      <link>https://codeporn.in/post/rest-apis-using-golang-fiber-and-mongodb/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/post/rest-apis-using-golang-fiber-and-mongodb/</guid>
+      <guid>https://codeporn.in/post/rest-apis-using-golang-fiber-and-mongodb/</guid>
       <description>What is Fiber? Fiber is an Express inspired web framework build on top of Fasthttp, the fastest HTTP engine for Go. Designed to ease things up for fast development with zero memory allocation and performance in mind.
 What is special in Fiber? source : https://fiber.wiki/benchmarks
 Fiber handled 6,162,556 responses per second with an average latency of 2.0 ms.
@@ -49,10 +49,10 @@ Express handled 367,069 responses per second with an average latency of 354.1 ms
     
     <item>
       <title>Dockerizing an Angular app using Nginx</title>
-      <link>https://theyashwantsoni.github.io/post/dockerizing-an-angular-app-using-nginx/</link>
+      <link>https://codeporn.in/post/dockerizing-an-angular-app-using-nginx/</link>
       <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/post/dockerizing-an-angular-app-using-nginx/</guid>
+      <guid>https://codeporn.in/post/dockerizing-an-angular-app-using-nginx/</guid>
       <description>What is Docker? Docker is a containerization tool used to streamline application development and deployment workflows across various environments.
 This tutorial shows how to Dockerize an Angular app via Nginx.
 We will be using:
@@ -62,10 +62,10 @@ ng new angular-docker-demo  Change the output path in your angular.</description
     
     <item>
       <title>Heroku Container Registry &amp; Deployment with Docker</title>
-      <link>https://theyashwantsoni.github.io/post/heroku-container-registry-deployment-with-docker/</link>
+      <link>https://codeporn.in/post/heroku-container-registry-deployment-with-docker/</link>
       <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/post/heroku-container-registry-deployment-with-docker/</guid>
+      <guid>https://codeporn.in/post/heroku-container-registry-deployment-with-docker/</guid>
       <description>Heroku: Deployment with Docker In this short article we will see how we can deploy docker images to Heroku.
 Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud and Heroku Container Registry allows you to deploy your Docker-based app to Heroku. Also, It is very useful for test environment of your app.
 We will be using:
@@ -74,10 +74,10 @@ We will be using:
     
     <item>
       <title>Host dynamic Node.js app on Firebase: Part-II</title>
-      <link>https://theyashwantsoni.github.io/post/host-dynamic-node.js-app-on-firebase-part-ii/</link>
+      <link>https://codeporn.in/post/host-dynamic-node.js-app-on-firebase-part-ii/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/post/host-dynamic-node.js-app-on-firebase-part-ii/</guid>
+      <guid>https://codeporn.in/post/host-dynamic-node.js-app-on-firebase-part-ii/</guid>
       <description>In this article we will connect our app with Firestore database.
 TL,DR; In the previous article we built a simple express app and deployed it to Firebase. To continue with this article you should read about previous one.
 Steps to connect and get data from Firebase real-time database. 1)Include firebase-admin SDK to the project const admin = require(&#39;firebase-admin&#39;); admin.initializeApp(); //creates a firebase app const topics = admin.database().ref(&#39;/topics&#39;); //reference to the collection or table  2)Create a firebase project and import a collection Go to firebase console and create a project.</description>
@@ -85,10 +85,10 @@ Steps to connect and get data from Firebase real-time database. 1)Include fireba
     
     <item>
       <title>Host dynamic Node.js app on Firebase: Part-I</title>
-      <link>https://theyashwantsoni.github.io/post/host-dynamic-node.js-app-on-firebase-part-i/</link>
+      <link>https://codeporn.in/post/host-dynamic-node.js-app-on-firebase-part-i/</link>
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/post/host-dynamic-node.js-app-on-firebase-part-i/</guid>
+      <guid>https://codeporn.in/post/host-dynamic-node.js-app-on-firebase-part-i/</guid>
       <description>In this tutorial, we&amp;rsquo;ll host our dynamic Node.js app on Firebase.
 You have probably heard of firebase static hosting, It allows you to host and serve static content.But if we want to our content to be dynamic then it can be done using firebase cloud functions and firstore realtime database.
 Dependencies:
@@ -97,10 +97,10 @@ Dependencies:
     
     <item>
       <title>Deploy Your First Application on Kubernetes</title>
-      <link>https://theyashwantsoni.github.io/post/deploy-your-first-application-on-kubernetes/</link>
+      <link>https://codeporn.in/post/deploy-your-first-application-on-kubernetes/</link>
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/post/deploy-your-first-application-on-kubernetes/</guid>
+      <guid>https://codeporn.in/post/deploy-your-first-application-on-kubernetes/</guid>
       <description>What is Kubernetes? Kubernetes is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications.
 This tutorial shows how to Dockerize and deploy a Nodejs app, built with ExpressJs, as Kubernetes cluster.
 We will be using:
