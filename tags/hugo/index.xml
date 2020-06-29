@@ -13,10 +13,10 @@
     
     <item>
       <title>Getting started with Hugo and Github pages</title>
-      <link>https://theyashwantsoni.github.io/getting-started-with-hugo-and-github-pages/</link>
+      <link>https://theyashwantsoni.github.io/post/getting-started-with-hugo-and-github-pages/</link>
       <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/getting-started-with-hugo-and-github-pages/</guid>
+      <guid>https://theyashwantsoni.github.io/post/getting-started-with-hugo-and-github-pages/</guid>
       <description>In this article we will discuss about a static site generators.
 What is Hugo? Hugo is one of the most popular open-source static site generators. We can create and serve static content within seconds. The framework is developed using Golang and it serves the &amp;ldquo;MarkDown&amp;rdquo; content.
 Installation These steps show installation using .deb package.

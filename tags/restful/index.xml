@@ -13,10 +13,10 @@
     
     <item>
       <title>Rest APIs Using Golang Fiber and MongoDB</title>
-      <link>https://theyashwantsoni.github.io/rest-apis-using-golang-fiber-and-mongodb/</link>
+      <link>https://theyashwantsoni.github.io/post/rest-apis-using-golang-fiber-and-mongodb/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/rest-apis-using-golang-fiber-and-mongodb/</guid>
+      <guid>https://theyashwantsoni.github.io/post/rest-apis-using-golang-fiber-and-mongodb/</guid>
       <description>What is Fiber? Fiber is an Express inspired web framework build on top of Fasthttp, the fastest HTTP engine for Go. Designed to ease things up for fast development with zero memory allocation and performance in mind.
 What is special in Fiber? source : https://fiber.wiki/benchmarks
 Fiber handled 6,162,556 responses per second with an average latency of 2.0 ms.

@@ -13,10 +13,10 @@
     
     <item>
       <title>Deploy Your First Application on Kubernetes</title>
-      <link>https://theyashwantsoni.github.io/deploy-your-first-application-on-kubernetes/</link>
+      <link>https://theyashwantsoni.github.io/post/deploy-your-first-application-on-kubernetes/</link>
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/deploy-your-first-application-on-kubernetes/</guid>
+      <guid>https://theyashwantsoni.github.io/post/deploy-your-first-application-on-kubernetes/</guid>
       <description>What is Kubernetes? Kubernetes is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications.
 This tutorial shows how to Dockerize and deploy a Nodejs app, built with ExpressJs, as Kubernetes cluster.
 We will be using:

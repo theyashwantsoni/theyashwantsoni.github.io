@@ -13,10 +13,10 @@
     
     <item>
       <title>Host dynamic Node.js app on Firebase: Part-II</title>
-      <link>https://theyashwantsoni.github.io/host-dynamic-node.js-app-on-firebase-part-ii/</link>
+      <link>https://theyashwantsoni.github.io/post/host-dynamic-node.js-app-on-firebase-part-ii/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/host-dynamic-node.js-app-on-firebase-part-ii/</guid>
+      <guid>https://theyashwantsoni.github.io/post/host-dynamic-node.js-app-on-firebase-part-ii/</guid>
       <description>In this article we will connect our app with Firestore database.
 TL,DR; In the previous article we built a simple express app and deployed it to Firebase. To continue with this article you should read about previous one.
 Steps to connect and get data from Firebase real-time database. 1)Include firebase-admin SDK to the project const admin = require(&#39;firebase-admin&#39;); admin.initializeApp(); //creates a firebase app const topics = admin.database().ref(&#39;/topics&#39;); //reference to the collection or table  2)Create a firebase project and import a collection Go to firebase console and create a project.</description>
@@ -24,10 +24,10 @@ Steps to connect and get data from Firebase real-time database. 1)Include fireba
     
     <item>
       <title>Host dynamic Node.js app on Firebase: Part-I</title>
-      <link>https://theyashwantsoni.github.io/host-dynamic-node.js-app-on-firebase-part-i/</link>
+      <link>https://theyashwantsoni.github.io/post/host-dynamic-node.js-app-on-firebase-part-i/</link>
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/host-dynamic-node.js-app-on-firebase-part-i/</guid>
+      <guid>https://theyashwantsoni.github.io/post/host-dynamic-node.js-app-on-firebase-part-i/</guid>
       <description>In this tutorial, we&amp;rsquo;ll host our dynamic Node.js app on Firebase.
 You have probably heard of firebase static hosting, It allows you to host and serve static content.But if we want to our content to be dynamic then it can be done using firebase cloud functions and firstore realtime database.
 Dependencies:

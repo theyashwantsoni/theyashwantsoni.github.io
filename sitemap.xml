@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://theyashwantsoni.github.io/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</loc>
+    <loc>https://theyashwantsoni.github.io/post/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</loc>
     <lastmod>2020-06-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -28,12 +28,17 @@
   </url>
   
   <url>
+    <loc>https://theyashwantsoni.github.io/post/</loc>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://theyashwantsoni.github.io/tags/</loc>
     <lastmod>2020-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://theyashwantsoni.github.io/getting-started-with-hugo-and-github-pages/</loc>
+    <loc>https://theyashwantsoni.github.io/post/getting-started-with-hugo-and-github-pages/</loc>
     <lastmod>2020-05-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -58,7 +63,7 @@
   </url>
   
   <url>
-    <loc>https://theyashwantsoni.github.io/rest-apis-using-golang-fiber-and-mongodb/</loc>
+    <loc>https://theyashwantsoni.github.io/post/rest-apis-using-golang-fiber-and-mongodb/</loc>
     <lastmod>2020-04-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -78,12 +83,12 @@
   </url>
   
   <url>
-    <loc>https://theyashwantsoni.github.io/dockerizing-an-angular-app-using-nginx/</loc>
+    <loc>https://theyashwantsoni.github.io/post/dockerizing-an-angular-app-using-nginx/</loc>
     <lastmod>2020-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://theyashwantsoni.github.io/heroku-container-registry-deployment-with-docker/</loc>
+    <loc>https://theyashwantsoni.github.io/post/heroku-container-registry-deployment-with-docker/</loc>
     <lastmod>2020-04-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -103,17 +108,17 @@
   </url>
   
   <url>
-    <loc>https://theyashwantsoni.github.io/host-dynamic-node.js-app-on-firebase-part-ii/</loc>
+    <loc>https://theyashwantsoni.github.io/post/host-dynamic-node.js-app-on-firebase-part-ii/</loc>
     <lastmod>2020-04-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://theyashwantsoni.github.io/host-dynamic-node.js-app-on-firebase-part-i/</loc>
+    <loc>https://theyashwantsoni.github.io/post/host-dynamic-node.js-app-on-firebase-part-i/</loc>
     <lastmod>2020-03-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://theyashwantsoni.github.io/deploy-your-first-application-on-kubernetes/</loc>
+    <loc>https://theyashwantsoni.github.io/post/deploy-your-first-application-on-kubernetes/</loc>
     <lastmod>2020-03-27T00:00:00+00:00</lastmod>
   </url>
   

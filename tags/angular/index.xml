@@ -13,10 +13,10 @@
     
     <item>
       <title>Dockerizing an Angular app using Nginx</title>
-      <link>https://theyashwantsoni.github.io/dockerizing-an-angular-app-using-nginx/</link>
+      <link>https://theyashwantsoni.github.io/post/dockerizing-an-angular-app-using-nginx/</link>
       <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/dockerizing-an-angular-app-using-nginx/</guid>
+      <guid>https://theyashwantsoni.github.io/post/dockerizing-an-angular-app-using-nginx/</guid>
       <description>What is Docker? Docker is a containerization tool used to streamline application development and deployment workflows across various environments.
 This tutorial shows how to Dockerize an Angular app via Nginx.
 We will be using:
