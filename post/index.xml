@@ -6,10 +6,22 @@
     <description>Recent content in Posts on codeporn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codeporn.in/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Automation using Ansible: Part-I</title>
+      <link>https://codeporn.in/post/automation-using-ansible-part-i/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codeporn.in/post/automation-using-ansible-part-i/</guid>
+      <description>This article contains brief introduction about Ansible. At the end I will share playbook for Nginx installation.
+Introduction to Ansible Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy.
+Avoid writing scripts or custom code to deploy and update your applications — automate in a language that approaches plain English.
+Advantages of using Ansible  Open Source Agentless Effeicient Simple YAML Reproducibility Does all kinds of stuff (Provisioning, Configuration Management, Orchestration etc.</description>
+    </item>
     
     <item>
       <title>Build and Deploy React App with Heroku Docker Container and Gitlab CI</title>

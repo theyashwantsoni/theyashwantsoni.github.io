@@ -3,128 +3,143 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://codeporn.in/post/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+    <loc>https://codeporn.in/tags/ansible/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://codeporn.in/tags/cicd/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+    <loc>https://codeporn.in/tags/automation/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/post/automation-using-ansible-part-i/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://codeporn.in/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/tags/gitlab/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/tags/heroku/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/post/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/tags/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/post/getting-started-with-hugo-and-github-pages/</loc>
-    <lastmod>2020-05-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/tags/hugo/</loc>
-    <lastmod>2020-05-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/tags/fiber/</loc>
-    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/tags/golang/</loc>
-    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/tags/mongodb/</loc>
-    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/post/rest-apis-using-golang-fiber-and-mongodb/</loc>
-    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/tags/restful/</loc>
-    <lastmod>2020-04-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/tags/angular/</loc>
-    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/tags/docker/</loc>
-    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/post/dockerizing-an-angular-app-using-nginx/</loc>
-    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codeporn.in/post/heroku-container-registry-deployment-with-docker/</loc>
-    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://codeporn.in/tags/nginx/</loc>
-    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/post/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/tags/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/post/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/tags/cicd/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/tags/gitlab/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/tags/heroku/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/post/getting-started-with-hugo-and-github-pages/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/tags/hugo/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/tags/fiber/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/tags/golang/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/tags/mongodb/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/post/rest-apis-using-golang-fiber-and-mongodb/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/tags/restful/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/tags/angular/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/tags/docker/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/post/dockerizing-an-angular-app-using-nginx/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codeporn.in/post/heroku-container-registry-deployment-with-docker/</loc>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://codeporn.in/tags/cloud-functions/</loc>
-    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://codeporn.in/tags/firebase/</loc>
-    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://codeporn.in/post/host-dynamic-node.js-app-on-firebase-part-ii/</loc>
-    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://codeporn.in/post/host-dynamic-node.js-app-on-firebase-part-i/</loc>
-    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://codeporn.in/post/deploy-your-first-application-on-kubernetes/</loc>
-    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://codeporn.in/tags/kubernetes/</loc>
-    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-30T17:31:33+05:30</lastmod>
   </url>
   
 </urlset>

@@ -1,0 +1,325 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+  <head itemscope itemtype="https://codeporn.in">
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="generator" content="Hugo 0.71.0" />
+    
+    <link rel="stylesheet" href="https://codeporn.in/css/custom.css">
+    
+    <link rel="stylesheet" href="https://codeporn.in/css/github.css">
+    
+
+
+<title itemprop="name">Automation using Ansible: Part-I | codeporn</title>
+<meta property="og:title" content="Automation using Ansible: Part-I | codeporn" />
+<meta name="twitter:title" content="Automation using Ansible: Part-I | codeporn" />
+<meta itemprop="name" content="Automation using Ansible: Part-I | codeporn" />
+<meta name="application-name" content="Automation using Ansible: Part-I | codeporn" />
+<meta property="og:site_name" content="codeporn" />
+
+
+
+
+<meta name="description" content="This article contains brief introduction about Ansible. At the end I will share playbook for Nginx installation.
+Introduction to Ansible Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy.
+Avoid writing scripts or custom code to deploy and update your applications — automate in a language that approaches plain English.
+Advantages of using Ansible  Open Source Agentless Effeicient Simple YAML Reproducibility Does all kinds of stuff (Provisioning, Configuration Management, Orchestration etc." />
+<meta itemprop="description" content="This article contains brief introduction about Ansible. At the end I will share playbook for Nginx installation.
+Introduction to Ansible Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy.
+Avoid writing scripts or custom code to deploy and update your applications — automate in a language that approaches plain English.
+Advantages of using Ansible  Open Source Agentless Effeicient Simple YAML Reproducibility Does all kinds of stuff (Provisioning, Configuration Management, Orchestration etc." />
+<meta property="og:description" content="This article contains brief introduction about Ansible. At the end I will share playbook for Nginx installation.
+Introduction to Ansible Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy.
+Avoid writing scripts or custom code to deploy and update your applications — automate in a language that approaches plain English.
+Advantages of using Ansible  Open Source Agentless Effeicient Simple YAML Reproducibility Does all kinds of stuff (Provisioning, Configuration Management, Orchestration etc." />
+<meta name="twitter:description" content="This article contains brief introduction about Ansible. At the end I will share playbook for Nginx installation.
+Introduction to Ansible Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy.
+Avoid writing scripts or custom code to deploy and update your applications — automate in a language that approaches plain English.
+Advantages of using Ansible  Open Source Agentless Effeicient Simple YAML Reproducibility Does all kinds of stuff (Provisioning, Configuration Management, Orchestration etc." />
+
+
+
+<base href="https://codeporn.in/post/automation-using-ansible-part-i/">
+<link rel="canonical" href="https://codeporn.in/post/automation-using-ansible-part-i/" itemprop="url" /> 
+<meta name="url" content="https://codeporn.in/post/automation-using-ansible-part-i/" />
+<meta name="twitter:url" content="https://codeporn.in/post/automation-using-ansible-part-i/" /> 
+<meta property="og:url" content="https://codeporn.in/post/automation-using-ansible-part-i/" />
+
+
+
+
+<meta property="og:locale" content="en">
+<meta name="language" content="">
+
+
+
+
+
+ 
+  <meta itemprop="image" content="https://codeporn.in/img/banner/ansible.png" />
+  <meta property="og:image" content="https://codeporn.in/img/banner/ansible.png" /> 
+  <meta name="twitter:image" content="https://codeporn.in/img/banner/ansible.png" />
+  <meta name="twitter:image:src" content="https://codeporn.in/img/banner/ansible.png" /> 
+
+
+
+
+<meta property="og:updated_time" content=2020-07-30T17:31:33&#43;0530 />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://codeporn.insitemap.xml" /> 
+
+
+
+
+
+ 
+
+  
+  
+  
+
+  <meta property="og:type" content="article" />
+  <meta property="article:publisher" content="https://facebook.com/theyashwantsoni" /> 
+  <meta property="og:article:published_time" content=2020-07-15T00:00:00Z /> 
+  <meta property="article:published_time" content=2020-07-15T00:00:00Z />
+  
+  
+  
+   
+    <meta name="news_keywords" content="ansible" />
+    <meta property="article:section" content="ansible" /> 
+  
+
+  <script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "Automation using Ansible: Part-I",
+      "author": {
+        "@type": "Person",
+        "name": "https:\/\/github.com\/theyashwantsoni"
+      },
+      "datePublished": "2020-07-15",
+      "description": "",
+      "wordCount":  288 ,
+      "mainEntityOfPage": "True",
+      "dateModified": "2020-07-30",
+      "image": {
+        "@type": "imageObject",
+        "url": ""
+      },
+      "publisher": {
+        "@type": "Personal",
+        "name": "codeporn",
+        "logo": {
+          "@type": "imageObject",
+          "url": "https://codeporn.in/logo/codeporn.png"
+        }
+      }
+    }
+  </script>
+
+
+
+
+
+
+<meta property="og:type" content="website" /> 
+<meta name="author" content="Yashwant Soni" />
+<script defer type="application/ld+json">
+  { 
+    "@context": "http://schema.org", 
+    "@type": "WebSite", 
+    "url": "https:\/\/codeporn.in\/post\/automation-using-ansible-part-i\/", 
+    "sameAs": [
+      "https:\/\/facebook.com\/theyashwantsoni", 
+      "https:\/\/github.com\/theyashwantsoni"
+    ], 
+    "name": "Automation using Ansible: Part-I", 
+    "logo": "https://codeporn.in/logo/codeporn.png" 
+  }
+</script>
+
+
+
+<link rel="shortcut icon" href="https://codeporn.in/favicon.ico" />
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="https://codeporn.in/logo/favicon32.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://codeporn.in/logo/favicon144.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://codeporn.in/logo/favicon120.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://codeporn.in/logo/favicon72.png" />
+<link rel="icon" href="https://codeporn.in/logo/favicon32.png" sizes="32x32" />
+<link rel="icon" sizes="192x192" href="https://codeporn.in/logo/favicon192.png" />
+
+
+
+<meta name="robots" content="index,follow" /> 
+<meta name="googlebot" content="index,follow" />
+
+
+
+<meta name="twitter:site" content="@theyashwantsoni">
+<meta name="twitter:creator" content="@theyashwantsoni" />
+
+
+
+
+
+<link rel="manifest" href="https://codeporn.inmanifest.json" />
+
+
+<meta name="theme-color" content="#03A9F4" /> 
+<meta name="msapplication-TileColor" content="#03A9F4" />
+
+<meta name="keywords" content="" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" /> 
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" /> 
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="codeporn" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" /> 
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300,600" rel="stylesheet" type="text/css">
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162003853-1"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-162003853-1');
+</script> 
+<script data-ad-client="ca-pub-8224956998844286" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  
+    
+
+  </head>
+  <body>
+    <nav class="nav-menu card">
+  <div>
+    <a href="https://codeporn.in/" style="font-size: 28px;font-weight: 600;">
+    <img src="https://codeporn.in/logo/codeporn.png" alt="logo">
+    </a >
+  </div>
+  <ul>
+     
+      
+      
+      <li><a class="nav-link" href="https://codeporn.in/tags/"><i data-feather="tag"></i> Tags</a></li>
+     
+      
+      
+      <li><a class="nav-link" href="https://codeporn.in/"><i data-feather="home"></i> Posts</a></li>
+    
+  </ul>
+</nav>
+
+      <main id="main">
+       
+<div class="container_" style="margin-top: 50px;">
+    <h1>Automation using Ansible: Part-I</h1>
+    <img style="width: 100%;" src="https://codeporn.in/img/banner/ansible.png">
+    
+  
+  
+    <a href="https://codeporn.in/tags/ansible" class="category">ansible</a>
+  
+  
+    <a href="https://codeporn.in/tags/automation" class="category">automation</a>
+  
+  
+    <a href="https://codeporn.in/tags/nginx" class="category">nginx</a>
+  
+ <br>  
+
+<span  class="date-time" style="color:lightgrey; font-size: 14px;">Last updated: <time datetime="2020-07-15">Jul 15, 2020</time></span>
+    <div style="height: 60px;"></div>
+    <article class="markdown-body">
+        <p>This article contains brief introduction about Ansible. At the end I will share playbook for Nginx installation.</p>
+<h1 id="introduction-to-ansible">Introduction to Ansible</h1>
+<p>Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy.</p>
+<p>Avoid writing scripts or custom code to deploy and update your applications — automate in a language that approaches plain English.</p>
+<h1 id="advantages-of-using-ansible">Advantages of using Ansible</h1>
+<ul>
+<li>Open Source</li>
+<li>Agentless</li>
+<li>Effeicient</li>
+<li>Simple YAML</li>
+<li>Reproducibility</li>
+<li>Does all kinds of stuff (Provisioning, Configuration Management, Orchestration etc. )</li>
+</ul>
+<h1 id="how-ansible-works">How Ansible works</h1>
+<p>image
+(image source javatpoint.com)</p>
+<p><strong>1)Modules</strong></p>
+<p>Modules are like small programs that Ansible pushes out from a control machine to all the nodes or remote hosts.</p>
+<p><strong>2)Plugins</strong></p>
+<p>Plugins enchances the core functionality of Ansible engine.</p>
+<p><strong>3)Inventories</strong></p>
+<p>Keeps Information about target machine. (Addresses, CMDB)</p>
+<p><strong>4)Playbook</strong></p>
+<p>Group of plays. A play is a group of tasks.</p>
+<p><strong>5)APIS</strong></p>
+<p>APIs helps you extend connection types, callbacks etc.</p>
+<h1 id="playbook-example">Playbook example</h1>
+<p><strong>1)Nginx installation on target machine</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">name</span>: <span style="color:#e6db74">&#34;Nginx playbook collection&#34;</span>
+  <span style="color:#66d9ef">hosts</span>: <span style="color:#ae81ff">127.0.0.1</span>
+  <span style="color:#66d9ef">connection</span>: local
+
+  <span style="color:#66d9ef">tasks</span>:
+   - <span style="color:#66d9ef">name</span>: Install nginx web server
+     <span style="color:#66d9ef">apt</span>:
+       <span style="color:#66d9ef">name</span>: nginx
+	   <span style="color:#66d9ef">state</span>: present
+	   <span style="color:#66d9ef">update_cache</span>: <span style="color:#66d9ef">false</span>
+	 <span style="color:#66d9ef">notify</span>:
+	   - start nginx
+
+  <span style="color:#66d9ef">handlers</span>:
+   - <span style="color:#66d9ef">name</span>: start nginx
+     <span style="color:#66d9ef">service</span>:
+       <span style="color:#66d9ef">name</span>: nginx
+       <span style="color:#66d9ef">state</span>: started
+</code></pre></div><p><strong>2)Remove Nginx :P</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">name</span>: <span style="color:#e6db74">&#34;Nginx playbook collection&#34;</span>
+  <span style="color:#66d9ef">hosts</span>: testhosts
+  <span style="color:#75715e">#create a group in /etc/ansible/hosts file</span>
+  <span style="color:#75715e">#[testhosts]</span>
+  <span style="color:#75715e">#127.0.0.1</span>
+  
+  <span style="color:#66d9ef">connection</span>: local
+
+  <span style="color:#66d9ef">tasks</span>:
+  - <span style="color:#66d9ef">name</span>: Ensure nginx service is stopped
+	  <span style="color:#66d9ef">service</span>:
+	    <span style="color:#66d9ef">name</span>: nginx
+	    <span style="color:#66d9ef">state</span>: stopped
+	    <span style="color:#66d9ef">ignore_errors</span>: yes
+  - <span style="color:#66d9ef">name</span>: remove nginx web server
+      <span style="color:#66d9ef">apt</span>:
+        <span style="color:#66d9ef">name</span>: nginx
+        <span style="color:#66d9ef">state</span>: absent
+  - <span style="color:#66d9ef">name</span>: remove nginx-common package
+      <span style="color:#66d9ef">apt</span>:
+        <span style="color:#66d9ef">name</span>: nginx-common
+        <span style="color:#66d9ef">state</span>: absent
+</code></pre></div><pre><code>				       _              _ _     _      
+                      / \   _ __  ___(_) |__ | | ___ 
+                     / _ \ | '_ \/ __| | '_ \| |/ _ \
+                    / ___ \| | | \__ \ | |_) | |  __/
+                   /_/   \_\_| |_|___/_|_.__/|_|\___|
+</code></pre><p>THE END!!!</p>
+
+    </article>
+</div>
+
+      </main>
+    <div class="container_">
+      <hr><br>
+  <p style="text-align: center;">Copyright © 2020 - Yashwant Soni | Logo & Banners - <a style="color: rgba(43, 188, 255, 0.918);" href="https://www.instagram.com/bigdaddy__hawk/">Vishal Sharma</a></p>
+    </div>
+  </body>
+</html>
