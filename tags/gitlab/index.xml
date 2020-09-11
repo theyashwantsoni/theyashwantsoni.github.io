@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gitlab on codeporn</title>
-    <link>https://codeporn.in/tags/gitlab/</link>
+    <link>https://theyashwantsoni.github.io/tags/gitlab/</link>
     <description>Recent content in Gitlab on codeporn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://codeporn.in/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://theyashwantsoni.github.io/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Build and Deploy React App with Heroku Docker Container and Gitlab CI</title>
-      <link>https://codeporn.in/post/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</link>
+      <link>https://theyashwantsoni.github.io/post/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</link>
       <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://codeporn.in/post/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</guid>
+      <guid>https://theyashwantsoni.github.io/post/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</guid>
       <description>In this article I will show you how to setup Gitlab CI/CD pipeline to deploy a React app with Docker.
 Introduction to GitLab CI/CD GitLab CI/CD is a powerful tool built into GitLab that allows you to apply all the continuous methods (Continuous Integration, Delivery, and Deployment) to your software with no third-party application or integration needed.
 How GitLab CI/CD works To use GitLab CI/CD, all you need is an application codebase hosted in a Git repository, and for your build, test, and deployment scripts to be specified in a file called [.</description>
