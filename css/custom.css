@@ -1,3 +1,8 @@
+@font-face {
+    font-family: armyFont;
+    src: url(../fonts/BlackOpsOne-Regular.ttf);
+}
+
 html, body{
     margin: 0;
     padding: 0;
@@ -28,11 +33,19 @@ nav ul{
 }
 nav ul li{
     list-style-type: none;
-    display: inline-block;
     float: right;
+    display: inline-block;
     padding: 5px 15px;
     margin: 0px 10px;
 }
+
+#nav_title{
+    font-size: 32px;
+    font-weight: 800;
+    font-family: Ubuntu, "times new roman", times, roman, serif;
+    /* color: rgba(43, 188, 255, 0.918); */
+}
+
 nav div{
     flex: 1;
     margin: auto;
