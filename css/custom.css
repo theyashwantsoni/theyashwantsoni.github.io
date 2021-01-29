@@ -161,6 +161,9 @@ nav div img{
       color: white;
   }
 @media only screen and (max-width: 600px) {
+    nav div{
+        flex: none;
+    }
     nav ul li{
         padding: 5px 10px;
         margin: 0px 5px;
