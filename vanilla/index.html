@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-Handler</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="myscripts.js"></script>
+</head>
+
+<body>
+    <section class="main-section">
+        <div class="section-header">
+            <h1 id="memo-head">MEMO</h1>
+            <input type="text" class="memo-search" placeholder="search title" value="" oninput="searchMemo(this)"/>
+        </div>
+        <div class="memo-search-empty">
+            <span>No records</span>
+        </div>
+        <div class="section-body">
+            <!-- <ol class="memo-list">
+                <li class="memo-item">task item
+                    <ul class="memo-action">
+                        <li><button>view</button></li>
+                        <li><button>del</button></li>
+                    </ul>
+                    <div contenteditable="true" class="memo-info">
+                        fsmdgmgkmfmkg
+                    </div>
+                </li>
+            </ol> -->
+        </div>
+        <div class="add-memo-form add-memo-section">
+            <input type="text" value="" id="memo-title" placeholder="Title">
+            <textarea name="" id="memo-note" cols="50" rows="10"></textarea>
+            <input type="button" id="memo-form-btn" value="submit" onclick="addMemoItem()">
+        </div>
+        <div class="section-footer">
+            <button class="memo-btn" onclick="viewAddSection()">add</button>
+        </div>
+    </section>
+</body>
+
+</html>
