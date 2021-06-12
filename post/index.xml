@@ -6,11 +6,7 @@
     <description>Recent content in Posts on Yashwant Soni</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://theyashwantsoni.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://theyashwantsoni.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hands on Helm</title>
       <link>https://theyashwantsoni.github.io/post/hands-on-helm/</link>
@@ -36,10 +32,10 @@ We will be using:
     
     <item>
       <title>Automation using Ansible: Part-I</title>
-      <link>https://theyashwantsoni.github.io/post/automation-using-ansible-part-i/</link>
+      <link>https://theyashwantsoni.github.io/post/automation-using-ansible-i/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/post/automation-using-ansible-part-i/</guid>
+      <guid>https://theyashwantsoni.github.io/post/automation-using-ansible-i/</guid>
       <description>This article contains brief introduction about Ansible. At the end I will share playbook for Nginx installation.
 Introduction to Ansible Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy.
 Avoid writing scripts or custom code to deploy and update your applications — automate in a language that approaches plain English.
@@ -67,7 +63,7 @@ How GitLab CI/CD works To use GitLab CI/CD, all you need is an application codeb
 What is Hugo? Hugo is one of the most popular open-source static site generators. We can create and serve static content within seconds. The framework is developed using Golang and it serves the &amp;ldquo;MarkDown&amp;rdquo; content.
 Installation These steps show installation using .deb package.
 First download the package.
-curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest \ | grep browser_download_url \ | grep Linux-64bit.deb \ | grep -v extended \ | cut -d &#39;&amp;quot;&#39; -f 4 \ | wget -i -  Then,</description>
+curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest \| grep browser_download_url \| grep Linux-64bit.deb \| grep -v extended \| cut -d &#39;&amp;quot;&#39; -f 4 \| wget -i - Then,</description>
     </item>
     
     <item>
@@ -92,7 +88,7 @@ Express handled 367,069 responses per second with an average latency of 354.1 ms
 This tutorial shows how to Dockerize an Angular app via Nginx.
 We will be using:
  docker (v18.09.7) node (v12.14.0) angular-cli (v9.0.7) nginx (:alpine from docker hub)  Lets create an Angular app first Use following command to create a new app.
-ng new angular-docker-demo  Change the output path in your angular.</description>
+ng new angular-docker-demo Change the output path in your angular.</description>
     </item>
     
     <item>
@@ -115,7 +111,7 @@ We will be using:
       <guid>https://theyashwantsoni.github.io/post/host-dynamic-node.js-app-on-firebase-part-ii/</guid>
       <description>In this article we will connect our app with Firestore database.
 TL,DR; In the previous article we built a simple express app and deployed it to Firebase. To continue with this article you should read about previous one.
-Steps to connect and get data from Firebase real-time database. 1)Include firebase-admin SDK to the project const admin = require(&#39;firebase-admin&#39;); admin.initializeApp(); //creates a firebase app const topics = admin.database().ref(&#39;/topics&#39;); //reference to the collection or table  2)Create a firebase project and import a collection Go to firebase console and create a project.</description>
+Steps to connect and get data from Firebase real-time database. 1)Include firebase-admin SDK to the project const admin = require(&#39;firebase-admin&#39;);admin.initializeApp(); //creates a firebase appconst topics = admin.database().ref(&#39;/topics&#39;); //reference to the collection or table 2)Create a firebase project and import a collection Go to firebase console and create a project.</description>
     </item>
     
     <item>

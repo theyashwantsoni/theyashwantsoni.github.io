@@ -6,11 +6,7 @@
     <description>Recent content in Heroku on Yashwant Soni</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://theyashwantsoni.github.io/tags/heroku/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://theyashwantsoni.github.io/tags/heroku/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Build and Deploy React App with Heroku Docker Container and Gitlab CI</title>
       <link>https://theyashwantsoni.github.io/post/build-and-deploy-react-app-with-heroku-docker-container-and-gitlab-ci/</link>

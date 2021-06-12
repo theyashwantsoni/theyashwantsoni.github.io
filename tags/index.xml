@@ -6,11 +6,7 @@
     <description>Recent content in Tags on Yashwant Soni</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://theyashwantsoni.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://theyashwantsoni.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>helm</title>
       <link>https://theyashwantsoni.github.io/tags/helm/</link>
@@ -107,24 +103,6 @@
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://theyashwantsoni.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MongoDB</title>
-      <link>https://theyashwantsoni.github.io/tags/mongodb/</link>
-      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://theyashwantsoni.github.io/tags/mongodb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Restful</title>
-      <link>https://theyashwantsoni.github.io/tags/restful/</link>
-      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://theyashwantsoni.github.io/tags/restful/</guid>
       <description></description>
     </item>
     

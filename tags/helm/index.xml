@@ -6,11 +6,7 @@
     <description>Recent content in helm on Yashwant Soni</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://theyashwantsoni.github.io/tags/helm/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://theyashwantsoni.github.io/tags/helm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hands on Helm</title>
       <link>https://theyashwantsoni.github.io/post/hands-on-helm/</link>

@@ -6,17 +6,13 @@
     <description>Recent content in nginx on Yashwant Soni</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://theyashwantsoni.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://theyashwantsoni.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automation using Ansible: Part-I</title>
-      <link>https://theyashwantsoni.github.io/post/automation-using-ansible-part-i/</link>
+      <link>https://theyashwantsoni.github.io/post/automation-using-ansible-i/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://theyashwantsoni.github.io/post/automation-using-ansible-part-i/</guid>
+      <guid>https://theyashwantsoni.github.io/post/automation-using-ansible-i/</guid>
       <description>This article contains brief introduction about Ansible. At the end I will share playbook for Nginx installation.
 Introduction to Ansible Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy.
 Avoid writing scripts or custom code to deploy and update your applications — automate in a language that approaches plain English.
@@ -33,7 +29,7 @@ Advantages of using Ansible  Open Source Agentless Effeicient Simple YAML Reprod
 This tutorial shows how to Dockerize an Angular app via Nginx.
 We will be using:
  docker (v18.09.7) node (v12.14.0) angular-cli (v9.0.7) nginx (:alpine from docker hub)  Lets create an Angular app first Use following command to create a new app.
-ng new angular-docker-demo  Change the output path in your angular.</description>
+ng new angular-docker-demo Change the output path in your angular.</description>
     </item>
     
   </channel>
