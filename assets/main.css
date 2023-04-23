@@ -1,4 +1,14 @@
+/*
+royal purple
+*/
+
 :root {
+    --backgroud-color: #D5DDE0;
+    --color: #000;
+    --primary: #000;
+}
+
+/* :root {
     --backgroud-color: #fff;
     --color: #343434;
     --primary: #0366d6;
@@ -10,9 +20,9 @@
         --color: #fff;
         --primary: #7bdffd;
     }
-}
+} */
 
-html.dark {
+/* html.dark {
     --backgroud-color: #343434;
     --color: #fff;
     --primary: #7bdffd;
@@ -22,7 +32,7 @@ html.light {
     --backgroud-color: #fff;
     --color: #343434;
     --primary: #0366d6;
-}
+} */
 
 * {
     margin: 0;
@@ -69,7 +79,7 @@ h1 {
     letter-spacing: -2px;
     font-weight: 900;
     font-size: calc(min(72px, max(38px, 100vw / 20)));
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(37, 145, 251, 0.98) 0.1%, rgb(48, 60, 232) 99.8%);
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, #00524C 0.1%, #1C3129 99.8%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
