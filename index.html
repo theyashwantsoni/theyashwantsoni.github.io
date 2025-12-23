@@ -3,69 +3,413 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Yashwant Soni</title>
+    <title>Yashwant Soni | Senior Software Engineer</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Senior Software Engineer specializing in AI/ML, Backend Development, and Scalable Systems" />
     <link rel="shortcut icon" href="https://theyashwantsoni.github.io/assets/avicon.png" />
-    <link rel="stylesheet" href="./assets/main.css" />
     <link rel="canonical" href="https://theyashwantsoni.github.io/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #003366;
+            --primary-light: #0055a4;
+            --accent: #228b22;
+            --text: #1a1a2e;
+            --text-muted: #64748b;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-light);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .title-role {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .title-role .company {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            transition: color 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+        }
+
+        .social-links svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: background 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-light);
+            color: white;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .section-title.no-border {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .section p {
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        /* About Section */
+        .about-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .highlight-text {
+            color: var(--text-muted);
+            font-style: italic;
+            margin-top: 12px;
+            font-size: 0.9rem;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .skill-category {
+            background: var(--bg-alt);
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .skill-category h4 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .skill-category p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            
+        }
+
+        .cta-section .section-title {
+            text-align: left;
+        }
+
+        .cta-box {
+            background: var(--bg-alt);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border);
+            height: calc(100% - 30px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cta-box p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            align-items: start;
+            margin-top: 8px;
+        }
+
+        .two-column .section {
+            margin-bottom: 0;
+        }
+
+        .two-column .cta-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 24px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            .name {
+                font-size: 1.8rem;
+            }
+
+            .title-role {
+                font-size: 0.9rem;
+            }
+
+            .social-links {
+                gap: 16px;
+            }
+
+            .social-links a {
+                font-size: 0.85rem;
+            }
+
+            .section {
+                margin-bottom: 24px;
+            }
+
+            .section-title {
+                font-size: 1rem;
+            }
+
+            .about-text {
+                font-size: 0.9rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .skill-category {
+                padding: 10px;
+            }
+
+            .skill-category h4 {
+                font-size: 0.7rem;
+            }
+
+            .skill-category p {
+                font-size: 0.8rem;
+            }
+
+            .cta-section {
+                padding: 20px 16px;
+            }
+
+            .cta-section h3 {
+                font-size: 1rem;
+            }
+
+            .cta-section p {
+                font-size: 0.85rem;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .two-column .section {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .name {
+                font-size: 1.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <main>
-        <h1 class="title">YASHWANT SONI</h1>
-        <p>
-            <span >Hello, My name is 
-            <img src="./assets/gravatar.jpeg" alt="yashwantsoni" class="avatar" /><strong>Yashwant</strong>. </span><br/>I am a
-            Senior Software Engineer at <b>
-                <a href="https://www.thechefkart.com/">Chefkart</a></b>. Previously, a S.E. at <strong><a href="https://www.alefedge.com/">Alefedge</a></strong> and <strong><a href="https://www.ranosys.com/">Ranosys Technologies</a></strong>. I try to create engaging, accessible & performant softwares. You can find me on
-            <a href="https://github.com/theyashwantsoni">github</a>,
-            <a href="https://www.linkedin.com/in/theyashwantsoni/">linkedin</a>, or reach me via
-            <a href="mailto:yashwantsoni009@gmail.com">email</a>.
-        </p>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="name">Yashwant Soni</h1>
+            <p class="title-role">Senior Software Engineer at <a href="https://payoneer.com" class="company">Payoneer (NASDAQ:PAYO)</a></p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/theyashwantsoni">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="mailto:yashwantsoni009@gmail.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+                    Email
+                </a>
+            </div>
+        </header>
 
+        <!-- About Section -->
+        <section class="section">
+            <h2 class="section-title">About</h2>
+            <p class="about-text">
+                I'm a Senior Software Engineer with 5+ years of experience building scalable backend systems. 
+                I specialize in designing high-performance microservices, integrating LLMs and agentic AI systems, and leading teams to deliver impactful products.
+                Previously worked with 
+                <a href="https://thechefkart.com">Chefkart</a>, 
+                <a href="https://alefedge.com">AlefEdge</a>, and 
+                <a href="https://ranosys.com">Ranosys</a>.
+            </p>
+            <p class="highlight-text">When I'm not coding, you'll find me on my bike, chanting, or exploring a new liqours.</p>
+        </section>
 
+        <!-- Two Column: Expertise + CTA -->
+        <div class="two-column">
+            <!-- Skills Section -->
+            <section class="section">
+                <h2 class="section-title no-border">Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>GenAI</h4>
+                        <p>LLMs, RAG, LangChain, Pinecone, Prompt Engineering</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Backend</h4>
+                        <p>Node.js, NestJS, Express.js, GraphQL, SQL</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Cloud & DevOps</h4>
+                        <p>AWS, Docker, Kubernetes, CI/CD</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Data & Messaging</h4>
+                        <p>Temporal.io, Kafka, Redis, BullMQ, BigQuery</p>
+                    </div>
+                </div>
+            </section>
 
-        <h2>Consulting</h2>
-        <div>
-            <p>Most often I’m hired to help build Web applications, usually with <strong>NodeJs/ExpressJs/React</strong>. However, I’m also
-                available for more technically complex work.</p>
-            <p>Finally, I’m available to provide technical advice. If you’re a non-profit trying to determine your
-                technical needs, I’d be happy to have a chat.</p>
+            <!-- Consulting/CTA Section -->
+            <section class="section cta-section">
+                <h2 class="section-title no-border">Let's Work Together</h2>
+                <div class="cta-box">
+                    <p>
+                        I'm available for consulting on backend architecture, GenAI integrations, and technical advisory. 
+                        Whether you're building a startup or scaling enterprise systems, I'd love to help.
+                    </p>
+                    <a href="mailto:yashwantsoni009@gmail.com" class="cta-button">Get in Touch</a>
+                </div>
+            </section>
         </div>
 
-        <h2>Collaboration</h2>
-        <div>
-            <p>I am always on the lookout for interesting projects to work on, if you have something you wish to collaborate on then don't hesitate to shoot me a message.</p>
-        </div>
-
-        <!-- <h2>Projects</h2>
-        <div id="games" class="grid">
-            <div>
-                <a href="https://theyashwantsoni.github.io/bit-planes/">Resume builder</a>
-                <div class="badge-ts" title="TypeScript"></div>
-                <div class="desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, eveniet veritatis deserunt, est modi laborum, excepturi animi repudiandae aut unde mollitia velit adipisci. Autem, culpa id iste tenetur animi omnis?
-                </div>
-            </div>
-            <div>
-                <a href="https://theyashwantsoni.github.io/bit-planes/">Resume builder</a>
-                <div class="badge-ts" title="TypeScript"></div>
-                <div class="desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, eveniet veritatis deserunt, est modi laborum, excepturi animi repudiandae aut unde mollitia velit adipisci. Autem, culpa id iste tenetur animi omnis?
-                </div>
-            </div>
-            <div></div>
-        </div> -->
-
-        <!-- <p>
-            ᕕ( ᐛ )ᕗ &nbsp;
-            <a href="https://github.com/theyashwantsoni?utf8=%E2%9C%93&amp;tab=repositories&amp;q=&amp;type=source"
-                id="more-projects" title="★50,736">
-                More projects on GitHub
-            </a>
-        </p> -->
-    </main>
+        <!-- Footer -->
+        <!-- <footer class="footer">
+            <p>© 2025 Yashwant Soni. Built with simplicity.</p>
+        </footer> -->
+    </div>
 </body>
 
 </html>
