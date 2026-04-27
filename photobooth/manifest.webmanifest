@@ -1,0 +1,10 @@
+{
+  "name": "Photo Booth",
+  "short_name": "Photo Booth",
+  "description": "Simple photobooth in the browser — pick a frame and save.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#e8f4fc",
+  "theme_color": "#3d7dd6"
+}

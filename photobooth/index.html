@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3d7dd6" />
+  <title>Photo Booth — pick a frame!</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="theme-playful">
+    <a href="#start-heading" class="skip-link">Skip to start</a>
+
+    <section id="start-screen" class="screen active" aria-labelledby="start-heading">
+      <div class="start-card">
+        <h1 id="start-heading" class="start-title">Photo Booth</h1>
+        <p class="start-lead">Pick 1, 3, or 4 photos in a row. Then choose a fun frame. Tap Start when you are ready.</p>
+        <button type="button" id="start-btn" class="btn btn-primary btn-huge">Start</button>
+        <p class="start-note">Grown-ups: the camera needs permission. Photos stay on this device.</p>
+      </div>
+    </section>
+
+    <section id="booth-screen" class="screen" aria-labelledby="booth-heading">
+      <header class="topbar">
+        <p id="booth-heading" class="topbar-title">Photo Booth</p>
+        <div class="topbar-actions">
+          <button type="button" id="flip-btn" class="btn btn-small" aria-label="Use other camera">Other camera</button>
+          <button type="button" id="exit-btn" class="btn btn-small btn-quiet" aria-label="Stop and go back">Back</button>
+        </div>
+      </header>
+
+      <main id="main-booth" class="booth-main">
+        <div class="stage">
+          <div class="camera-frame" role="region" aria-label="Camera">
+            <div class="camera-frame-video-host">
+              <video id="video" class="camera-feed-decoder" autoplay playsinline muted aria-hidden="true" tabindex="-1"></video>
+              <canvas id="booth-preview-canvas" class="camera-preview-canvas" width="640" height="480" aria-label="You on camera"></canvas>
+            </div>
+            <div id="countdown" class="countdown" role="status" aria-live="polite" aria-atomic="true"></div>
+            <div id="flash" class="flash" aria-hidden="true"></div>
+            <div id="shot-indicator" class="shot-indicator" aria-hidden="true"></div>
+          </div>
+
+          <div class="booth-actions">
+            <div class="shot-count-block">
+              <p class="shot-count-label" id="shot-count-label">Photos in this strip</p>
+              <div class="shot-seg" role="group" aria-labelledby="shot-count-label">
+                <button type="button" class="seg-btn" data-shots="1" aria-pressed="false">1</button>
+                <button type="button" class="seg-btn" data-shots="3" aria-pressed="false">3</button>
+                <button type="button" class="seg-btn" data-shots="4" aria-pressed="false">4</button>
+              </div>
+            </div>
+            <p class="booth-hint" id="booth-hint"></p>
+            <button type="button" id="capture-btn" class="shutter" aria-label="Take photos">
+              <span class="shutter-ring" aria-hidden="true"></span>
+              <span class="shutter-core" aria-hidden="true"></span>
+              <span class="shutter-label">Take photos</span>
+            </button>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <section id="result-screen" class="screen" aria-labelledby="result-heading">
+      <header class="topbar">
+        <h2 id="result-heading" class="topbar-title">Your strip</h2>
+        <div class="topbar-actions">
+          <button type="button" id="retake-btn" class="btn btn-small">Take again</button>
+          <button type="button" id="new-btn" class="btn btn-small btn-quiet">Home</button>
+        </div>
+      </header>
+
+      <main class="result-main" id="main-result">
+        <div class="result-frame-panel" aria-labelledby="frame-panel-label">
+          <p id="frame-panel-label" class="panel-label">Pick a frame</p>
+          <label class="field-big">
+            <span class="field-big-text">Frame</span>
+            <select id="frame-select" class="input-big" aria-describedby="frame-help"></select>
+          </label>
+          <p id="frame-help" class="help-text">This draws on the border of your picture strip.</p>
+          <button type="button" id="delete-custom-frame-btn" class="btn btn-small btn-danger" hidden>Remove this frame</button>
+        </div>
+
+        <details class="create-details" id="create-frame-details">
+          <summary class="create-summary" id="create-frame-heading">Make a new frame</summary>
+          <div class="create-details-inner">
+            <label class="field-big">
+              <span class="field-big-text">Name</span>
+              <input id="new-frame-name" class="input-big" type="text" maxlength="18" placeholder="My cool frame" autocomplete="off" />
+            </label>
+            <fieldset class="color-fieldset">
+              <legend class="field-big-text">Color</legend>
+              <div id="frame-color-swatches" class="swatches" role="group" aria-label="Pick a color"></div>
+              <input id="new-frame-color" type="color" value="#ff7043" class="visually-hidden" aria-hidden="true" tabindex="-1" />
+            </fieldset>
+            <fieldset class="style-fieldset">
+              <legend class="field-big-text">Look</legend>
+              <div class="style-radios" role="radiogroup" aria-label="Frame look">
+                <label class="style-pill"><input type="radio" name="new-frame-style" value="thick" checked /> Thick border</label>
+                <label class="style-pill"><input type="radio" name="new-frame-style" value="dots" /> Dots</label>
+                <label class="style-pill"><input type="radio" name="new-frame-style" value="wave" /> Wavy lines</label>
+              </div>
+            </fieldset>
+            <button type="button" id="add-custom-frame-btn" class="btn btn-primary btn-large">Add frame</button>
+          </div>
+        </details>
+
+        <div class="result-stage">
+          <div id="result-preview" class="result-preview">
+            <canvas id="result-canvas" role="img" aria-label="Your photo strip"></canvas>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button type="button" id="download-btn" class="btn btn-primary btn-huge">Save picture</button>
+        </div>
+      </main>
+    </section>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
